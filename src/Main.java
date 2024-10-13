@@ -9,7 +9,7 @@ public class Main {
         System.out.println("Ingrese los numeros de un DNI y te diré su letra");
         int numero= sc.nextInt();
         int numeroModulo = 23;
-        int modulo = Math.floorMod(numero, 23);
+        int modulo = Math.floorMod(numero, numeroModulo);
         sc.close();
 
         if (numero>9999999 && numero<100000000){
