@@ -4,13 +4,41 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+        /*
+        Scanner sc = new Scanner(System.in);
+        int numeroDNI = sc.nextInt();
+        char Letra = ' ';
+        int moduloDNI = numeroDNI % 23;
+        sc.close();
+
+        switch (moduloDNI) {
+            case 1:
+                Letra = 'A';
+            break;
+            //...
+        }
+        System.out.println(Letra);
+        */
+
 
         Scanner sc = new Scanner (System.in);
         System.out.println("Ingrese los numeros de un DNI y te diré su letra");
         int numero= sc.nextInt();
         int numeroModulo = 23;
         int modulo = Math.floorMod(numero, numeroModulo);
+        int NumDni = sc.nextInt();
+        char Letra= ' ';
         sc.close();
+
+        int RestoDni = NumDni % 23;
+
+        switch (RestoDni) {
+            case 1:{
+                Letra = 'A';
+                break;
+            }
+        }
+        System.out.println("El numero es: "+Letra);
 
         if (numero>9999999 && numero<100000000){
             if (modulo==0){
